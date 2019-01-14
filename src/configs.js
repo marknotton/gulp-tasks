@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////////////////
+// Configs
+////////////////////////////////////////////////////////////////////////////////
+
 import configs from '@marknotton/configs'
 
 // Environment
@@ -23,8 +27,8 @@ const output = (done) => {
 	}
 }
 
-output.displayName = 'sass';
-output.description = 'generation of sass assets';
+output.displayName = 'configs';
+output.description = 'Configeration settings';
 
 module.exports = {
 

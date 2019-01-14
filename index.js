@@ -13,19 +13,8 @@ import sass      from './gulp/sass'
 import symbols   from './gulp/symbols'
 import serve     from './gulp/browser-sync'
 import configs   from './gulp/configs'             // Configerations and settings.
+import react     from './gulp/react'             // Configerations and settings.
 import {scripts, vendors, es5} from './gulp/scripts'
-
-// =============================================================================
-// Tasks
-// =============================================================================
-
-gulp.task(sass)
-gulp.task(scripts)
-gulp.task(vendors)
-gulp.task(es5)
-gulp.task(symbols)
-gulp.task(serve)
-gulp.task('configs', gulp.parallel(configs.output))
 
 // =============================================================================
 // Notification message settings
@@ -47,21 +36,21 @@ notifier.settings({
   }
 })
 
-// =============================================================================
-// Default task
-// =============================================================================
-
-// const defaultTasks = gulp.series(vendors, scripts, symbols, sass, () => {
-let default = gulp.series(scripts, vendors, symbols, sass, callback => {
-	configs.render = false
-	log('Done:', "All Gulp tasks completed")
-	if ( !configs.watching ) { log.render() }
-	callback()
-})
-
-default.displayName = 'default';
-default.description = 'default';
-
-export default default
+// // =============================================================================
+// // Default task
+// // =============================================================================
+//
+// // const defaultTasks = gulp.series(vendors, scripts, symbols, sass, () => {
+// let default = gulp.series(scripts, vendors, symbols, sass, callback => {
+// 	configs.render = false
+// 	log('Done:', "All Gulp tasks completed")
+// 	if ( !configs.watching ) { log.render() }
+// 	callback()
+// })
+//
+// default.displayName = 'default';
+// default.description = 'default';
+//
+// export default default
 
 export { scripts, vendors, es5, react, serve, sass, symbols, configs }
