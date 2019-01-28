@@ -1,6 +1,6 @@
 {
   "name": "@marknotton/gulp-tasks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A private collection of Gulp tasks commonly used within internal projects.",
   "main": "index",
   "files": [
