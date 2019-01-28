@@ -2,16 +2,24 @@
   "name": "@marknotton/gulp-tasks",
   "version": "0.0.1",
   "description": "A private collection of Gulp tasks commonly used within internal projects.",
-  "main": "index.js",
+  "main": "index",
+  "files": [
+    "index.*"
+  ],
   "scripts": {
+    "prepare": "babel index.mjs --out-file index.js && babel index.js --minified --no-comments --source-maps -o index.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marknotton/gulp-tasks.git"
   },
+  "author": {
+    "name": "Mark Notton",
+    "url": "https://www.marknotton.uk"
+  },
   "dependencies": {
-		"@babel/core": "^7.2.2",
+    "@babel/core": "^7.2.2",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
@@ -39,10 +47,18 @@
     "postcss-inline-svg": "^3.1.1"
   },
   "keywords": [
-    "gulp-tasks"
+    "gulp-tasks",
+    "sass",
+    "symbols",
+    "scripts",
+    "vendors",
+    "configs"
   ],
-  "author": "Mark Notton",
   "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0"
+  },
   "bugs": {
     "url": "https://github.com/marknotton/gulp-tasks/issues"
   },
