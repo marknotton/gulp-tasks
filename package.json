@@ -1,10 +1,11 @@
 {
   "name": "@marknotton/gulp-tasks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A private collection of Gulp tasks commonly used within internal projects.",
   "main": "index",
   "files": [
-    "index.*"
+    "index.*",
+		"src/*.*"
   ],
   "scripts": {
     "prepare": "babel index.mjs --out-file index.js && babel index.js --minified --no-comments --source-maps -o index.min.js",
